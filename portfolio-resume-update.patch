@@ -1,0 +1,267 @@
+diff --git a/src/components/ContactSection.tsx b/src/components/ContactSection.tsx
+index 23a5934..6f7be41 100644
+--- a/src/components/ContactSection.tsx
++++ b/src/components/ContactSection.tsx
+@@ -18,7 +18,8 @@ const ContactSection = () => {
+           <span className="section-label">// contact</span>
+           <h2 className="section-title mb-4">Let's Build Something</h2>
+           <p className="text-lg text-muted-foreground">
+-            Open to DevOps, SRE, and Cloud Engineering opportunities.
++            Open to Linux System Admin, DevOps, SRE, and Cloud Engineering opportunities.<br />
++            Work Authorization: F-1 OPT / STEM OPT with EAD.
+           </p>
+         </motion.div>
+ 
+@@ -57,11 +58,11 @@ const ContactSection = () => {
+           transition={{ delay: 0.4 }}
+           className="flex items-center justify-center gap-4 mt-8"
+         >
+-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
++          <a href="https://www.linkedin.com/in/aditya-mandlik-9065281a9" target="_blank" rel="noopener noreferrer"
+             className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300">
+             <Linkedin className="w-5 h-5" />
+           </a>
+-          <a href="https://github.com" target="_blank" rel="noopener noreferrer"
++          <a href="https://github.com/mandlikaditya" target="_blank" rel="noopener noreferrer"
+             className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300">
+             <Github className="w-5 h-5" />
+           </a>
+diff --git a/src/components/EducationSection.tsx b/src/components/EducationSection.tsx
+index dba9d5e..12a3e37 100644
+--- a/src/components/EducationSection.tsx
++++ b/src/components/EducationSection.tsx
+@@ -6,8 +6,8 @@ const education = [
+     school: "Illinois Institute of Technology",
+     location: "Chicago, IL",
+     degree: "MS in Computer Science",
+-    period: "Expected May 2026",
+-    coursework: ["Cloud Computing", "Computer Networks", "Systems Security", "Distributed Systems"],
++    period: "Aug 2024 – Present",
++    coursework: ["Systems Security", "Cloud Computing", "Distributed Systems", "Computer Networks"],
+   },
+   {
+     school: "Dr. Babasaheb Ambedkar Marathwada University",
+diff --git a/src/components/ExperienceSection.tsx b/src/components/ExperienceSection.tsx
+index 17e9b26..ad27190 100644
+--- a/src/components/ExperienceSection.tsx
++++ b/src/components/ExperienceSection.tsx
+@@ -3,27 +3,18 @@ import { Briefcase } from "lucide-react";
+ 
+ const experiences = [
+   {
+-    role: "Linux System Administrator Intern",
++    role: "Linux System Administrator",
+     company: "Exposy Data Labs Pvt. Ltd.",
+     location: "India",
+-    period: "Apr 2023 – Sep 2023",
++    period: "Apr 2022 – Jul 2024",
+     highlights: [
+-      "Managed 12+ production Linux servers (CentOS, Ubuntu) maintaining 99.5% uptime through routine patching and health checks",
+-      "Troubleshot CI/CD pipeline failures, improved reliability, and documented pipeline configurations for the team",
+-      "Automated 15+ operational tasks with Bash & Python scripts, cutting manual workload by 40%",
+-      "Led incident response following runbooks; contributed to post-incident root cause analysis and remediation",
+-      "Authored 20+ runbooks, SOPs, and troubleshooting guides improving team onboarding efficiency",
+-    ],
+-  },
+-  {
+-    role: "Full Stack Developer Intern",
+-    company: "Alhansat Solutions Pvt. Ltd.",
+-    location: "India",
+-    period: "Dec 2022 – Feb 2023",
+-    highlights: [
+-      "Built Node.js applications with Git version control, merge requests, and automated testing workflows",
+-      "Designed responsive UI/UX prototypes in Figma with object-oriented Node.js and Firebase backend",
+-      "Automated deployment processes improving application performance across multiple environments",
++      "Configured, deployed, and sustained 50+ production servers (CentOS, Ubuntu, RHEL, Windows Server), performing OS installation, system imaging, software updates, and hardware troubleshooting to ensure 99.9% uptime and reliability",
++      "Managed IT asset tracking, equipment inventory, and organized deployment areas for streamlined hardware provisioning, configuration, and end-of-life recycling across the organization",
++      "Provided end-user technical support by resolving hardware and software issues, monitoring and assigning helpdesk tickets, and ensuring timely resolution of IT support requests for 100+ employees",
++      "Systematized deployment, monitoring, and maintenance workflows using Python and Bash scripts, reducing manual workload by 40% and improving IT operational efficiency",
++      "Performed security hardening, vulnerability scanning, system patching, and incident response across server infrastructure, improving security posture and compliance",
++      "Created and upheld technical documentation, SOPs, troubleshooting guides, and knowledge base articles for IT infrastructure operations and new employee onboarding",
++      "Collaborated with cross-functional IT infrastructure teams in an Agile environment, participating in sprint planning, daily standups, and knowledge-sharing sessions",
+     ],
+   },
+ ];
+diff --git a/src/components/HeroSection.tsx b/src/components/HeroSection.tsx
+index ea00f9d..951eaa0 100644
+--- a/src/components/HeroSection.tsx
++++ b/src/components/HeroSection.tsx
+@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
+ import { motion } from "framer-motion";
+ import { Terminal, ChevronDown, Download } from "lucide-react";
+ 
+-const titles = ["DevOps Engineer", "Cloud Architect", "CI/CD Specialist", "Automation Expert"];
++const titles = ["Linux System Administrator", "Cloud & DevOps Engineer", "SRE Engineer", "Infrastructure Specialist"];
+ 
+ const HeroSection = () => {
+   const [titleIndex, setTitleIndex] = useState(0);
+@@ -56,6 +56,15 @@ const HeroSection = () => {
+           <span className="font-display text-sm text-primary">Available for opportunities</span>
+         </motion.div>
+ 
++        <motion.div
++          initial={{ opacity: 0, scale: 0.9 }}
++          animate={{ opacity: 1, scale: 1 }}
++          transition={{ duration: 0.5, delay: 0.15 }}
++          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-accent/20 bg-accent/5 mb-8 ml-2"
++        >
++          <span className="font-display text-xs text-accent">F-1 OPT / STEM OPT with EAD</span>
++        </motion.div>
++
+         <motion.h1
+           initial={{ opacity: 0, y: 40 }}
+           animate={{ opacity: 1, y: 0 }}
+@@ -85,8 +94,8 @@ const HeroSection = () => {
+           transition={{ duration: 0.7, delay: 0.45 }}
+           className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-12"
+         >
+-          Engineering resilient cloud infrastructure, automating everything, 
+-          and building CI/CD pipelines that scale from zero to millions.
++          Engineering resilient cloud infrastructure, automating operations, 
++          and maintaining 50+ production servers with 99.9% uptime.
+         </motion.p>
+ 
+         {/* Stats row */}
+@@ -97,9 +106,9 @@ const HeroSection = () => {
+           className="flex flex-wrap items-center justify-center gap-8 md:gap-16 mb-12"
+         >
+           {[
+-            { value: "99.5%", label: "Uptime Maintained" },
+-            { value: "15+", label: "Tasks Automated" },
+-            { value: "10+", label: "Services Deployed" },
++            { value: "99.9%", label: "Uptime Maintained" },
++            { value: "50+", label: "Servers Managed" },
++            { value: "100+", label: "Users Supported" },
+           ].map((stat) => (
+             <div key={stat.label} className="text-center">
+               <div className="stat-number">{stat.value}</div>
+diff --git a/src/components/ProjectsSection.tsx b/src/components/ProjectsSection.tsx
+index 4aca3d3..3c7eda3 100644
+--- a/src/components/ProjectsSection.tsx
++++ b/src/components/ProjectsSection.tsx
+@@ -4,18 +4,19 @@ import { GitBranch, Server, Database, ExternalLink } from "lucide-react";
+ const projects = [
+   {
+     title: "Chaos Sentinel",
+-    subtitle: "CI/CD Automation & Incident Response Platform",
++    subtitle: "Enterprise Infrastructure & Security Operations Platform",
+     period: "Nov 2025 – Feb 2026",
+     icon: Server,
+     featured: true,
++    link: "https://github.com/mandlikaditya/Chaos-Sentinel-an-AI-Powered-Cloud-Incident-Simulator",
+     highlights: [
+-      "End-to-end CI/CD pipelines with GitHub Actions for 10+ containerized services across AWS & GCP",
+-      "Docker on Kubernetes with auto-scaling, health probes, and configuration management",
+-      "Prometheus + Grafana + Alertmanager monitoring with alert tuning and log validation",
+-      "Automated operational tasks with Bash, Python, Terraform IaC, and Ansible",
+-      "Comprehensive runbooks and deployment documentation for incident response",
++      "Architected an autonomous SRE agent on GKE integrating Chaos Mesh experiments with real-time Prometheus observability, enabling proactive fault injection across Kubernetes workloads",
++      "Engineered a 4-stage agentic pipeline (Analyze → Generate → Detect → Report) powered by Google Gemini's multimodal reasoning, automating root cause analysis and generating SRE-style postmortems",
++      "Published chaos-sentinel-mcp as an open-source Python package on PyPI using the Model Context Protocol (FastMCP), enabling LLM-driven orchestration of Kubernetes chaos experiments",
++      "Designed infrastructure resilience workflows on GKE applying SRE principles — fault injection, blast radius containment, and rollback procedures — reducing manual incident triage through AI-assisted anomaly correlation",
++      "Built end-to-end cloud-native observability integrating Prometheus, Alertmanager, and Streamlit dashboards to monitor chaos experiment impact and support SLO validation",
+     ],
+-    tags: ["GitHub Actions", "Docker", "Kubernetes", "Terraform", "Ansible", "AWS", "GCP", "Prometheus"],
++    tags: ["GKE", "Chaos Mesh", "Prometheus", "Gemini AI", "FastMCP", "PyPI", "Kubernetes", "Streamlit"],
+   },
+   {
+     title: "Real Estate Management System",
+@@ -23,9 +24,10 @@ const projects = [
+     period: "Jan 2025 – Apr 2025",
+     icon: Database,
+     featured: false,
++    link: "https://github.com/mandlikaditya/Real-Estate-Management-System",
+     highlights: [
+-      "Python/Flask app with PostgreSQL, Git version control, and automated testing",
+-      "RESTful APIs with secure authentication and indexed queries handling 1,000+ records",
++      "Developed secure web application with user authentication, access controls, and comprehensive technical documentation and SOPs for deployment and maintenance",
++      "Designed and deployed Python (Flask) application with PostgreSQL backend, implementing RESTful APIs and database optimization to handle 1,000+ records efficiently",
+     ],
+     tags: ["Python", "Flask", "PostgreSQL", "REST API", "Git"],
+   },
+@@ -95,7 +97,7 @@ const ProjectsSection = () => {
+                     ))}
+                   </ul>
+ 
+-                  <div className="flex flex-wrap gap-2 ml-0 lg:ml-[60px]">
++                  <div className="flex flex-wrap gap-2 items-center ml-0 lg:ml-[60px]">
+                     {project.tags.map((tag) => (
+                       <span
+                         key={tag}
+@@ -104,6 +106,15 @@ const ProjectsSection = () => {
+                         {tag}
+                       </span>
+                     ))}
++                    <a
++                      href={project.link}
++                      target="_blank"
++                      rel="noopener noreferrer"
++                      className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-display font-semibold bg-secondary text-foreground border border-border hover:border-primary/50 hover:text-primary transition-all duration-300 ml-1"
++                    >
++                      <ExternalLink className="w-3 h-3" />
++                      View on GitHub
++                    </a>
+                   </div>
+                 </div>
+               </div>
+diff --git a/src/components/SkillsSection.tsx b/src/components/SkillsSection.tsx
+index 3c3f85c..eda0d0a 100644
+--- a/src/components/SkillsSection.tsx
++++ b/src/components/SkillsSection.tsx
+@@ -2,34 +2,39 @@ import { motion } from "framer-motion";
+ 
+ const skillCategories = [
+   {
+-    title: "CI/CD & DevOps",
+-    icon: "⚡",
+-    skills: ["Git", "GitHub Actions", "GitLab", "CI/CD Pipelines", "Automated Testing", "SDLC"],
++    title: "Operating Systems",
++    icon: "🐧",
++    skills: ["Windows 10/11", "Windows Server", "macOS", "Ubuntu", "CentOS", "RHEL", "Debian"],
++  },
++  {
++    title: "IT Support & Deployment",
++    icon: "🖥️",
++    skills: ["System Imaging", "Hardware Configuration", "Software Installation", "OS Deployment"],
+   },
+   {
+-    title: "Cloud & Infrastructure",
++    title: "Cloud & DevOps",
+     icon: "☁️",
+-    skills: ["AWS (EC2, S3, IAM, VPC)", "GCP", "Terraform", "Ansible", "Infrastructure as Code"],
++    skills: ["AWS (EC2, S3, IAM, VPC, CloudWatch)", "GCP", "Docker", "Kubernetes", "Terraform", "Ansible", "GitHub Actions", "Git"],
+   },
+   {
+-    title: "Containers & Orchestration",
+-    icon: "🐳",
+-    skills: ["Docker", "Kubernetes", "Container Registries", "Auto-scaling", "Health Probes"],
++    title: "Networking & Security",
++    icon: "🔒",
++    skills: ["TCP/IP", "DNS", "VPN", "Firewalls", "TLS/SSL", "Security Hardening", "Vulnerability Scanning", "Access Management"],
+   },
+   {
+-    title: "Scripting & Languages",
+-    icon: "💻",
+-    skills: ["Bash", "Python", "JavaScript", "Node.js", "C#", "SQL"],
++    title: "Monitoring & Observability",
++    icon: "📊",
++    skills: ["Prometheus", "Grafana", "Alertmanager", "CloudWatch", "Log Analysis", "Incident Response"],
+   },
+   {
+-    title: "Linux & Networking",
+-    icon: "🐧",
+-    skills: ["CentOS", "Ubuntu", "RHEL", "Debian", "TCP/IP", "DNS", "VPN", "SSH"],
++    title: "Programming & Scripting",
++    icon: "💻",
++    skills: ["Python", "Bash", "JavaScript", "Node.js", "SQL", "PowerShell"],
+   },
+   {
+-    title: "Monitoring & Observability",
+-    icon: "📊",
+-    skills: ["Prometheus", "Grafana", "Alertmanager", "CloudWatch", "Log Validation"],
++    title: "Productivity & Collaboration",
++    icon: "⚡",
++    skills: ["Microsoft Office Suite", "Google Workspace", "Slack", "Jira", "Agile/Scrum"],
+   },
+ ];
+ 
