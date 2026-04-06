@@ -9,7 +9,7 @@ const blogs = [
     tags: ["6G", "AI", "Smart Glasses", "MWC 2026", "Wireless"],
     date: "April 2026",
     readTime: "8 min read",
-    link: "#", // Replace with your Medium URL after publishing
+    link: "https://medium.com/@adityamandlik17/mwc-2026-ai-native-6g-networks-and-smart-glasses-are-no-longer-science-fiction-abca7760fa65", // Replace with your Medium URL after publishing
   },
   {
     title: "I Tracked 5 Technologies Across 3 Years of CES — Here's What Actually Happened",
