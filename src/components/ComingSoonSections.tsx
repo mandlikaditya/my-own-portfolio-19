@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FlaskConical, BookOpen, PenTool, Award, Lock } from "lucide-react";
+import { FlaskConical, BookOpen, Award, Lock } from "lucide-react";
 
 interface ComingSoonSectionProps {
   id: string;
@@ -25,13 +25,6 @@ const sections: ComingSoonSectionProps[] = [
     icon: BookOpen,
   },
   {
-    id: "blog",
-    label: "// blog",
-    title: "Blog",
-    description: "Technical articles, tutorials, and insights — coming soon.",
-    icon: PenTool,
-  },
-  {
     id: "certifications",
     label: "// certifications",
     title: "Certifications",
@@ -53,11 +46,11 @@ const ComingSoonSections = () => {
           <span className="section-label">// more</span>
           <h2 className="section-title">More Coming Soon</h2>
           <p className="text-muted-foreground mt-4 max-w-xl mx-auto">
-            Expanding this portfolio with patents, research, blogs, and certifications.
+            Expanding this portfolio with patents, research, and certifications.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           {sections.map((section, i) => (
             <motion.div
               key={section.id}

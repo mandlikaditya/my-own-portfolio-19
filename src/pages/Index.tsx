@@ -4,6 +4,7 @@ import SkillsSection from "@/components/SkillsSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import EducationSection from "@/components/EducationSection";
+import BlogSection from "@/components/BlogSection";
 import ComingSoonSections from "@/components/ComingSoonSections";
 import ContactSection from "@/components/ContactSection";
 
@@ -16,6 +17,7 @@ const Index = () => {
       <ExperienceSection />
       <ProjectsSection />
       <EducationSection />
+      <BlogSection />
       <ComingSoonSections />
       <ContactSection />
       <footer className="py-8 text-center border-t border-border">
