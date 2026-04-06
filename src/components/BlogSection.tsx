@@ -18,7 +18,7 @@ const blogs = [
     tags: ["CES", "Wi-Fi 8", "Matter", "AI Assistants", "Health Tech"],
     date: "April 2026",
     readTime: "12 min read",
-    link: "#", // Replace with your Medium URL after publishing
+    link: "https://medium.com/@adityamandlik17/3-years-of-ces-told-me-exactly-where-tech-is-heading-here-are-the-5-trends-that-prove-it-d56319a7f525", // Replace with your Medium URL after publishing
   },
 ];
 
